@@ -99,5 +99,10 @@ public class Operators {
         // the syntax is objName instanceof className
         String myString = "love";
         System.out.println(myString instanceof String);
+
+        // Ternary operator: conditional operator shorthand for if-then-else statement.
+        // it must evaluate an expression on the left. Syntax: Expression ? a : b;
+        int c = a < b? a : b;
+        System.out.println(c);
     }
 }
