@@ -94,5 +94,10 @@ public class Operators {
         // decrement operator
         result2 = --b;
         System.out.println("After decrement: " + result2);
+
+        // instanceof operator: to check if an object is an instance of a class.
+        // the syntax is objName instanceof className
+        String myString = "love";
+        System.out.println(myString instanceof String);
     }
 }
