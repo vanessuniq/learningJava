@@ -45,6 +45,26 @@ public class Operators {
         // assign value using =*
         var *= num;
         System.out.println("var using *=: " + var);
+
+        // Relational operators used for comparison. returns true or false
+
+        // == operator
+        System.out.println(a == b);  
+
+        // != operator
+        System.out.println(a != b);  
+
+        // > operator
+        System.out.println(a > b);  
+
+        // < operator
+        System.out.println(a < b);  
+
+        // >= operator
+        System.out.println(a >= b);  
+
+        // <= operator
+        System.out.println(a <= b);  
         
     }
 }
