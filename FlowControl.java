@@ -66,5 +66,12 @@ public class FlowControl {
             sum += i;
         }
         System.out.println(sum);
+
+        // for-each loop to iterate through arrays
+        int[] arr = {2,4,5,8,10};
+
+        for (int i : arr) {
+            System.out.print(i);
+        }
     }
 }
