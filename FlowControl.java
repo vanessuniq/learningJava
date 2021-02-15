@@ -49,8 +49,6 @@ public class FlowControl {
         }
         System.out.println(double1 + " " + operator + " " + double2 + " = " + result);
 
-        input.close();
-
         /**
          * Note: The Java switch statement only works with:
          * 
@@ -73,5 +71,19 @@ public class FlowControl {
         for (int i : arr) {
             System.out.print(i);
         }
+
+        // while loop
+        // ask user for numbers and add them until the input number is negative
+        int sum1 = 0;
+        System.out.print("Sum = " + sum1 +". Enter a number to add to Sum: ");
+        int inputNum = input.nextInt();
+
+        while (inputNum >= 0) {
+            sum1 += inputNum;
+            System.out.print("Sum = " + sum1 +". Enter a number to add to Sum: ");
+            inputNum = input.nextInt();
+        }
+        System.out.println("The sum of all positive number you entered is " + sum1);
+        input.close();
     }
 }
