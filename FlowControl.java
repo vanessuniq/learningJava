@@ -50,5 +50,14 @@ public class FlowControl {
         System.out.println(double1 + " " + operator + " " + double2 + " = " + result);
 
         input.close();
+
+        /**
+         * Note: The Java switch statement only works with:
+         * 
+         * Java Primitive data types: byte, short, char, and int
+         * Java Enumerated types
+         * Java String Class
+         * Java Wrapper Classes: Character, Byte, Short, and Integer.
+         */
     }
 }
