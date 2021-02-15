@@ -29,6 +29,22 @@ public class Operators {
          System.out.println("a / b = " + (a / b));
          System.out.println("The remainder of a / b is " + (a % b));
 
+         // Assignment operators
+         // create variables
+        int num = 4;
+        int var;
+
+        // assign value using =
+        var = num;
+        System.out.println("var using =: " + var);
+
+        // assign value using =+
+        var += num;
+        System.out.println("var using +=: " + var);
+
+        // assign value using =*
+        var *= num;
+        System.out.println("var using *=: " + var);
         
     }
 }
