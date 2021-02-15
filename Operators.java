@@ -77,5 +77,22 @@ public class Operators {
         // ! operator
         System.out.println(!(5 == 3));  // true
         System.out.println(!(5 > 3));  // false
+
+        // Unary operators
+
+        int result1, result2;
+
+        // original value
+        System.out.println("Value of a: " + a);
+
+        // increment operator
+        result1 = ++a;
+        System.out.println("After increment: " + result1);
+
+        System.out.println("Value of b: " + b);
+
+        // decrement operator
+        result2 = --b;
+        System.out.println("After decrement: " + result2);
     }
 }
