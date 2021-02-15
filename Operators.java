@@ -66,5 +66,16 @@ public class Operators {
         // <= operator
         System.out.println(a <= b);  
         
+        // Logical operators: used to check two expressions. it results in true or false
+
+        // && operator
+        System.out.println((5 > 3) && (8 > 5));  // true
+
+        // || operator
+        System.out.println((5 < 3) || (8 > 5));  // true
+
+        // ! operator
+        System.out.println(!(5 == 3));  // true
+        System.out.println(!(5 > 3));  // false
     }
 }
