@@ -49,22 +49,22 @@ public class Operators {
         // Relational operators used for comparison. returns true or false
 
         // == operator
-        System.out.println(a == b);  
+        System.out.println(a == b);  // false
 
         // != operator
-        System.out.println(a != b);  
+        System.out.println(a != b);  // true
 
         // > operator
-        System.out.println(a > b);  
+        System.out.println(a > b);  // true
 
         // < operator
-        System.out.println(a < b);  
+        System.out.println(a < b);  // false
 
         // >= operator
-        System.out.println(a >= b);  
+        System.out.println(a >= b);  // true
 
         // <= operator
-        System.out.println(a <= b);  
+        System.out.println(a <= b);  // false
         
         // Logical operators: used to check two expressions. it results in true or false
 
