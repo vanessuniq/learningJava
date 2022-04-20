@@ -1,7 +1,5 @@
 package control_flow;
 
-import java.security.cert.PolicyNode;
-
 public class ForLoop {
   public static void main(String[] args) {
     String[] treasureItems = { "Magic Book", "Silver spoon", "Gold", "History document" };
