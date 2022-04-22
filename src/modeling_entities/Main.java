@@ -2,9 +2,7 @@ package modeling_entities;
 
 public class Main {
   public static void main(String[] args) {
-    String myString = new String("Hello String class!\n");
-    String myOtheString = new String("I will master you.\n");
-    System.out.println(myString);
-    System.out.println(myOtheString);
+    Student vanessa = new Student("Vanessa", 29, 3.59);
+    System.out.format("Hello, my name is %s, I am %d, and my GPA is %,.2f.\n", vanessa.name, vanessa.age, vanessa.gpa);
   }
 }
