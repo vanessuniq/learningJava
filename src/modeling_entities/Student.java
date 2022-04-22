@@ -24,19 +24,16 @@ public class Student {
     return gpa;
   }
 
-  public String setName(String name) {
+  public void setName(String name) {
     this.name = name;
-    return this.name;
   }
 
-  public int setAge(int age) {
+  public void setAge(int age) {
     this.age = age;
-    return this.age;
   }
 
-  public double setGpa(double gpa) {
+  public void setGpa(double gpa) {
     this.gpa = gpa;
-    return this.gpa;
   }
 
   public void printStudentInfo() {
