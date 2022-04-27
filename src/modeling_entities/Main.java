@@ -7,5 +7,7 @@ public class Main {
 
     Employee matt = new Employee("Matt", "teacher", 3.5, 60000);
     matt.printEmployeeInfo();
+    matt.update("Matthew");
+    matt.printEmployeeInfo();
   }
 }

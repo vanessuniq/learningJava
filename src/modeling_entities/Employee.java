@@ -50,6 +50,16 @@ public class Employee {
     setTitle(title);
     setExperience(experience);
     setSalary(salary);
+
+    saveToDatabase();
+  }
+
+  public void update(String name) {
+    update(name, title, experience, salary);
+  }
+
+  public void update(String name, String title) {
+    update(name, title, experience, salary);
   }
 
   public double calculateBonus(float performancePercentage) {
@@ -70,7 +80,11 @@ public class Employee {
     System.out.format("%s is a %s with %.2f experience making $%.2f.\n", name, title, experience, salary);
     System.out.format("After the performance review this year, %s received a bonus of $%.2f.\n", name,
         calculateBonus(10));
-    System.out.format("Moreover, %s's salary increased by %.2f percent to $%.2f.", name, calculateIncrement() * 100,
+    System.out.format("Moreover, %s's salary increased by %.2f percent to $%.2f.\n\n", name, calculateIncrement() * 100,
         salary);
+  }
+
+  public void saveToDatabase() {
+    System.out.format("Updating data to database .....(%s, %s, %.2f, %.2f).\n\n", name, title, experience, salary);
   }
 }
