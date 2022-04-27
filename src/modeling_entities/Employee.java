@@ -6,9 +6,17 @@ public class Employee {
   private double salary;
   private String title;
 
-  public Employee(String name, String title, double experience, double salary) {
+  public Employee() {
+
+  }
+
+  public Employee(String name, String title) {
     this.name = name;
     this.title = title;
+  }
+
+  public Employee(String name, String title, double experience, double salary) {
+    this(name, title);
     this.experience = experience;
     this.salary = salary;
   }
