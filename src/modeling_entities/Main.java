@@ -9,5 +9,8 @@ public class Main {
     matt.printEmployeeInfo();
     matt.update("Matthew");
     matt.printEmployeeInfo();
+
+    Cookie c1 = new Cookie("ujefkj", "Vaness", "hkklsf", 0);
+    System.out.println("\n(c1): " + c1);
   }
 }
