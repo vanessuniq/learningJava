@@ -11,6 +11,9 @@ public class Main {
     matt.printEmployeeInfo();
 
     Cookie c1 = new Cookie("ujefkj", "Vaness", "hkklsf", 0);
+    Cookie c2 = new Cookie("olrn", "Jojo", "kslf", 3);
     System.out.println("\n(c1): " + c1 + ", " + Cookie.cookieType);
+    System.out.println("\n(c2): " + c2);
+    System.out.println("Total number of active cookies: " + Cookie.all);
   }
 }

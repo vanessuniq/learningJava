@@ -1,7 +1,8 @@
 package modeling_entities;
 
 public class Cookie {
-  public static String cookieType = "LOGGED_IN_USER_COOKIE";
+  public static final String cookieType = "LOGGED_IN_USER_COOKIE";
+  public static int all = 0;
   private String id;
   private String userName;
   private String sessionKey;
@@ -12,6 +13,7 @@ public class Cookie {
     this.userName = userName;
     this.sessionKey = sessionKey;
     this.itemsInCart = itemsInCart;
+    all += 1;
   }
 
   public String getId() {
