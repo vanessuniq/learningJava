@@ -11,6 +11,6 @@ public class Main {
     matt.printEmployeeInfo();
 
     Cookie c1 = new Cookie("ujefkj", "Vaness", "hkklsf", 0);
-    System.out.println("\n(c1): " + c1);
+    System.out.println("\n(c1): " + c1 + ", " + Cookie.cookieType);
   }
 }

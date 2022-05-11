@@ -1,6 +1,7 @@
 package modeling_entities;
 
 public class Cookie {
+  public static String cookieType = "LOGGED_IN_USER_COOKIE";
   private String id;
   private String userName;
   private String sessionKey;
