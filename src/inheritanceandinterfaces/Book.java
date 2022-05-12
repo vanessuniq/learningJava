@@ -24,14 +24,13 @@ public class Book {
       if (field.getName().equals("bindingType")) {
         continue;
       }
+      field.setAccessible(true);
       try {
-        field.setAccessible(true);
         info.append(", " + field.getName() + ": " + field.get(this));
-      } catch (IllegalArgumentException e) {
-        continue;
-      } catch (IllegalAccessException e) {
+      } catch (IllegalArgumentException | IllegalAccessException e) {
         continue;
       }
+
     }
     System.out.println(info.toString());
   }
