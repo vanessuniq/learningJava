@@ -27,6 +27,6 @@ public class Main {
     fictionBook.setBindingType("OnlinePDF");
     fictionBook.bookInfo();
     fictionBook.checkOutBook();
-    System.out.println("Is fictionBook an instance of book?: " + ((fictionBook instanceof Book) ? "Yes" : "No"));
+    System.out.println("\nIs fictionBook an instance of book?: " + ((fictionBook instanceof Book) ? "Yes" : "No"));
   }
 }

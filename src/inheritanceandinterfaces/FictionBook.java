@@ -14,4 +14,9 @@ public class FictionBook extends Book {
   public void setSubject(String subject) {
     this.subject = subject;
   }
+
+  @Override
+  public void checkOutBook() {
+    System.out.format("The fiction book covers %s subject", subject);
+  }
 }
