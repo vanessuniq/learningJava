@@ -1,6 +1,9 @@
 package inheritanceandinterfaces;
 
 import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Book {
   private String bindingType = "Paperback";
@@ -37,7 +40,9 @@ public class Book {
 
   @Override
   public String toString() {
-    Field[] fields = this.getClass().getDeclaredFields();
+    List<Field> fields = new ArrayList<>(Arrays.asList(this.getClass().getSuperclass().getDeclaredFields()));
+    fields.addAll(Arrays.asList(this.getClass().getDeclaredFields()));
+
     StringBuilder info = new StringBuilder("Book info");
     for (Field field : fields) {
       field.setAccessible(true);
