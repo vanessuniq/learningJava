@@ -19,13 +19,13 @@ public class Main {
     System.out.println("\n(c2): " + c2);
     System.out.println("Total number of active cookies: " + Cookie.getAll());
 
-    Book javaBook = new Book();
+    Book javaBook = new Book("Java Learning");
     System.out.println("Java Book binding type: " + javaBook.getBindingType());
-    javaBook.bookInfo();
+    System.out.println(javaBook);
     javaBook.checkOutBook();
-    FictionBook fictionBook = new FictionBook("Marvel");
+    FictionBook fictionBook = new FictionBook("Marvel", "Galaxy");
     fictionBook.setBindingType("OnlinePDF");
-    fictionBook.bookInfo();
+    System.out.println("\n" + fictionBook);
     fictionBook.checkOutBook();
     System.out.println("\nIs fictionBook an instance of book?: " + ((fictionBook instanceof Book) ? "Yes" : "No"));
   }

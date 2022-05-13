@@ -4,6 +4,24 @@ import java.lang.reflect.Field;
 
 public class Book {
   private String bindingType = "Paperback";
+  private String name;
+
+  public Book(String bindingType, String name) {
+    this(name);
+    this.bindingType = bindingType;
+  }
+
+  public Book(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
   public String getBindingType() {
     return bindingType;
@@ -14,16 +32,14 @@ public class Book {
   }
 
   public void checkOutBook() {
-    System.out.println("The book has been checked out successfully!");
+    System.out.format("The book %s has been checked out successfully!", name);
   }
 
-  public void bookInfo() {
+  @Override
+  public String toString() {
     Field[] fields = this.getClass().getDeclaredFields();
-    StringBuilder info = new StringBuilder("Book info: bindingType: " + bindingType);
+    StringBuilder info = new StringBuilder("Book info");
     for (Field field : fields) {
-      if (field.getName().equals("bindingType")) {
-        continue;
-      }
       field.setAccessible(true);
       try {
         info.append(", " + field.getName() + ": " + field.get(this));
@@ -32,6 +48,6 @@ public class Book {
       }
 
     }
-    System.out.println(info.toString());
+    return info.toString();
   }
 }
