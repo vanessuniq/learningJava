@@ -38,4 +38,12 @@ public class ResidentialProperty extends Property {
   public void setHoaFees(float hoaFees) {
     this.hoaFees = hoaFees;
   }
+
+  @Override
+  public void printDetails() {
+    super.printDetails();
+    System.out.format("Additional property details {residentialType = %s, hoaFees = $%.2f}", getResidentialType(),
+        hoaFees);
+    System.out.println();
+  }
 }

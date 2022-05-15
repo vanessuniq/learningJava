@@ -2,6 +2,8 @@ package modeling_entities;
 
 import inheritanceandinterfaces.Book;
 import inheritanceandinterfaces.FictionBook;
+import inheritanceandinterfaces.ResidentialProperty;
+import inheritanceandinterfaces.ResidentialProperty.Type;
 
 public class Main {
   public static void main(String[] args) {
@@ -28,5 +30,8 @@ public class Main {
     System.out.println("\n" + fictionBook);
     fictionBook.checkOutBook();
     System.out.println("\nIs fictionBook an instance of book?: " + ((fictionBook instanceof Book) ? "Yes" : "No"));
+
+    ResidentialProperty alphaResidence = new ResidentialProperty("Graciou", Type.CONDO, 1800, 132.78f);
+    alphaResidence.printDetails();
   }
 }
