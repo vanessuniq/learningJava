@@ -3,6 +3,7 @@ package modeling_entities;
 import inheritanceandinterfaces.Automobile;
 import inheritanceandinterfaces.Book;
 import inheritanceandinterfaces.FictionBook;
+import inheritanceandinterfaces.Lamborghini;
 import inheritanceandinterfaces.ResidentialProperty;
 import inheritanceandinterfaces.Sedan;
 import inheritanceandinterfaces.ResidentialProperty.Type;
@@ -41,5 +42,8 @@ public class Main {
     Automobile sedan = new Sedan("Honda", "Civic", 24000.00);
     System.out.println(sedan);
     System.out.println("\nIs sedan and instance of Automobile?: " + ((sedan instanceof Sedan) ? "Yes" : "No"));
+
+    Automobile lambo = new Lamborghini("Aventura", 55300.00);
+    System.out.println(lambo);
   }
 }
