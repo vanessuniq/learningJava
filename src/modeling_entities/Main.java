@@ -33,5 +33,6 @@ public class Main {
 
     ResidentialProperty alphaResidence = new ResidentialProperty("Graciou", Type.CONDO, 1800, 132.78f);
     alphaResidence.printDetails();
+    System.out.println("Property type: " + ResidentialProperty.getType());
   }
 }

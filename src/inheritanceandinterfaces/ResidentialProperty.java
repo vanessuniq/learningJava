@@ -11,9 +11,13 @@ public class ResidentialProperty extends Property {
   private float hoaFees;
 
   public ResidentialProperty(String name, Type residentialType, int size, float hoaFees) {
-    super(name, "Reseidential", size);
+    super(name, size);
     this.residentialType = residentialType;
     this.hoaFees = hoaFees;
+  }
+
+  public static String getType() {
+    return "Residential";
   }
 
   public String getResidentialType() {
@@ -42,7 +46,8 @@ public class ResidentialProperty extends Property {
   @Override
   public void printDetails() {
     super.printDetails();
-    System.out.format("Additional property details {residentialType = %s, hoaFees = $%.2f}", getResidentialType(),
+    System.out.format("Residential property additional details {residentialType = %s, hoaFees = $%.2f}",
+        getResidentialType(),
         hoaFees);
     System.out.println();
   }

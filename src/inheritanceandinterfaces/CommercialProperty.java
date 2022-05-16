@@ -11,7 +11,7 @@ public class CommercialProperty extends Property {
   private float contractedServicesFees;
 
   public CommercialProperty(String name, int size, Type commercialPropertyType, float contractedServicesFees) {
-    super(name, "Commercial", size);
+    super(name, size);
     this.contractedServicesFees = contractedServicesFees;
     this.commercialPropertyType = commercialPropertyType;
   }
