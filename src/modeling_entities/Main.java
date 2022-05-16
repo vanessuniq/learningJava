@@ -31,8 +31,9 @@ public class Main {
     fictionBook.checkOutBook();
     System.out.println("\nIs fictionBook an instance of book?: " + ((fictionBook instanceof Book) ? "Yes" : "No"));
 
-    ResidentialProperty alphaResidence = new ResidentialProperty("Graciou", Type.CONDO, 1800, 132.78f);
+    ResidentialProperty alphaResidence = new ResidentialProperty("Gracious", Type.CONDO, 1800, 132.78);
     alphaResidence.printDetails();
-    System.out.println("Property type: " + ResidentialProperty.getType());
+    alphaResidence.calculateNewFees();
+    System.out.println("New HOA fees for alphaResidence: $" + alphaResidence.getHoaFees());
   }
 }

@@ -7,17 +7,14 @@ public class ResidentialProperty extends Property {
     TOWNHOUSE
   }
 
+  public static final double INCREASE_RATE = 0.15;
   private Type residentialType = Type.SINGLE_FAMILY_HOME;
-  private float hoaFees;
+  private double hoaFees;
 
-  public ResidentialProperty(String name, Type residentialType, int size, float hoaFees) {
-    super(name, size);
+  public ResidentialProperty(String name, Type residentialType, int size, double hoaFees) {
+    super(name, "Residential", size);
     this.residentialType = residentialType;
     this.hoaFees = hoaFees;
-  }
-
-  public static String getType() {
-    return "Residential";
   }
 
   public String getResidentialType() {
@@ -35,11 +32,11 @@ public class ResidentialProperty extends Property {
     return typeValue;
   }
 
-  public float getHoaFees() {
+  public double getHoaFees() {
     return hoaFees;
   }
 
-  public void setHoaFees(float hoaFees) {
+  public void setHoaFees(double hoaFees) {
     this.hoaFees = hoaFees;
   }
 
@@ -50,5 +47,11 @@ public class ResidentialProperty extends Property {
         getResidentialType(),
         hoaFees);
     System.out.println();
+  }
+
+  @Override
+  public void calculateNewFees() {
+    double newHoaFees = getHoaFees() * (1 + INCREASE_RATE);
+    setHoaFees(newHoaFees);
   }
 }
