@@ -28,6 +28,7 @@ public class Sedan implements Automobile {
 
   @Override
   public String toString() {
-    return String.format("Sedan(Make: %s, Model: %s, Price: %.2f)", make, model, price);
+    return String.format("Sedan(Make: %s, Model: %s, Price: %.2f, Safety assessment program: %s)", make, model, price,
+        safetyAssessmentProgram);
   }
 }
