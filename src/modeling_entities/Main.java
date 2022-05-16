@@ -1,8 +1,10 @@
 package modeling_entities;
 
+import inheritanceandinterfaces.Automobile;
 import inheritanceandinterfaces.Book;
 import inheritanceandinterfaces.FictionBook;
 import inheritanceandinterfaces.ResidentialProperty;
+import inheritanceandinterfaces.Sedan;
 import inheritanceandinterfaces.ResidentialProperty.Type;
 
 public class Main {
@@ -35,5 +37,9 @@ public class Main {
     alphaResidence.printDetails();
     alphaResidence.calculateNewFees();
     System.out.println("New HOA fees for alphaResidence: $" + alphaResidence.getHoaFees());
+
+    Automobile sedan = new Sedan("Honda", "Civic", 24000.00);
+    System.out.println(sedan);
+    System.out.println("\nIs sedan and instance of Automobile?: " + ((sedan instanceof Sedan) ? "Yes" : "No"));
   }
 }
