@@ -7,6 +7,7 @@ import inheritanceandinterfaces.Lamborghini;
 import inheritanceandinterfaces.ResidentialProperty;
 import inheritanceandinterfaces.Sedan;
 import inheritanceandinterfaces.ResidentialProperty.Type;
+import reflection.Subject;
 
 public class Main {
   public static void main(String[] args) {
@@ -45,5 +46,10 @@ public class Main {
 
     Automobile lambo = new Lamborghini("Aventura", 55300.00, 100);
     System.out.println(lambo);
+
+    System.out.println("----------------------------------------------------------------");
+    System.out.println("-- System or Application class loader --");
+    System.out.println("Subject class loader: " + Subject.class.getClassLoader());
+    System.out.println();
   }
 }
