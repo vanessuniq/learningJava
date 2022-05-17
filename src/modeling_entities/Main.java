@@ -43,7 +43,7 @@ public class Main {
     System.out.println(sedan);
     System.out.println("\nIs sedan and instance of Automobile?: " + ((sedan instanceof Sedan) ? "Yes" : "No"));
 
-    Automobile lambo = new Lamborghini("Aventura", 55300.00);
+    Automobile lambo = new Lamborghini("Aventura", 55300.00, 100);
     System.out.println(lambo);
   }
 }

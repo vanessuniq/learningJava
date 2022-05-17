@@ -4,10 +4,12 @@ public class Lamborghini implements SportsCar {
   private static final String SPORTS_CAR_MAKE = "Lamborghini";
   private String model;
   private Double price;
+  private float toSpeed;
 
-  public Lamborghini(String model, Double price) {
+  public Lamborghini(String model, Double price, float toSpeed) {
     this.model = model;
     this.price = price;
+    this.toSpeed = toSpeed;
   }
 
   @Override
@@ -26,7 +28,13 @@ public class Lamborghini implements SportsCar {
   }
 
   @Override
+  public float getToSpeed() {
+    return toSpeed;
+  }
+
+  @Override
   public String toString() {
-    return String.format("Lamborghini(Model: %s, Price: $%.2f)", model, price);
+    return String.format("Lamborghini(Release Date: %s, Model: %s, Price: $%.2f, toSpeed: %.0f mi/hr)",
+        getReleaseDate(), model, price, toSpeed);
   }
 }
