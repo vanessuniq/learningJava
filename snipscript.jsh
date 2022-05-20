@@ -38,5 +38,23 @@ while((line = reader.readLine())!= null) {
   // System.out.println(product.id);
   products.add(new Product(prod[0].trim(), prod[1].trim(), Double.parseDouble(prod[2].trim())));
 }
-
+reader.close();
 products
+
+// Transformation of products data and write data to new file:
+// Convert the price of each product from usd to eur
+double USD_EUR = .94;
+
+double usdToEur(double usdValue) {
+  return USD_EUR * usdValue;
+}
+
+String outFilePath = "/Users/vfotso/Development/code/java-learning/java-basic/eu_products.csv";
+BufferedWriter writer = new BufferedWriter(new FileWriter(outFilePath));
+
+for(Product prod: products) {
+  prod.price = usdToEur(prod.price);
+  String line = String.format("%s, %s, %.2f %n", prod.name, prod.description, prod.price);
+  writer.write(line);
+}
+writer.close();
