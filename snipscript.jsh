@@ -3,6 +3,9 @@
 import java.util.List;
 import java.util.ArrayList;
 
+System.out.println("This program is a shell script");
+System.out.println("The program reads a csv file of products detail, loads the data to a Product class, convert the price to EUR and then write the new data to a file called eu_products.csv.");
+
 public class Product {
   private static final Random idGenerator = new Random();
   String id;
@@ -34,9 +37,13 @@ List<Product> products = new ArrayList<>();
 while((line = reader.readLine())!= null) {
   String[] prod = line.trim().split(",");
   System.out.println(Arrays.toString(prod));
-  // Product product = new Product(prod[0].trim(), prod[1].trim(), Double.parseDouble(prod[2].trim()));
-  // System.out.println(product.id);
-  products.add(new Product(prod[0].trim(), prod[1].trim(), Double.parseDouble(prod[2].trim())));
+  try {
+    products.add(new Product(prod[0].trim(), prod[1].trim(), Double.parseDouble(prod[2].trim())));
+  } catch (Exception e) {
+    System.out.format("Exception: %s found.\nSkipping product: %s\n", e.toString(), Arrays.toString(prod));
+    continue;
+  }
+
 }
 reader.close();
 products
@@ -58,3 +65,6 @@ for(Product prod: products) {
   writer.write(line);
 }
 writer.close();
+
+System.out.println("The program has completed!");
+/exit
