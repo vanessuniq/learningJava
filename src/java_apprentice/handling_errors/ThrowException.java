@@ -11,7 +11,9 @@ public class ThrowException {
     try {
       validateGpa(gpaInput.nextFloat());
     } catch (InputMismatchException e) {
-      System.out.println("Your input is not valid. Valid input must be a float.\n");
+      e.initCause(new IllegalArgumentException("Your input is not valid. Valid input must be a float.\n"));
+      System.out.println("An exception has occurred: \n");
+      System.out.println(e.getCause());
     } finally {
       gpaInput.close();
     }
