@@ -29,10 +29,12 @@ public class Collectionss {
     linkedList.add("grace");
     linkedList.add("faith");
     linkedList.add("abundance");
+    linkedList.add("abundance");
+    linkedList.remove("abundance");
+
     System.out.println("Linked list: " + linkedList);
     Collections.sort(linkedList, new StringComparison());
     System.out.println("\nSorted linked list: " + linkedList);
-
     int index = linkedList.indexOf("grace");
     if (index == -1) {
       System.out.println("\nThe linked list does not contain the word 'grace'.");
@@ -41,7 +43,6 @@ public class Collectionss {
     }
 
     System.out.println("\nGoodbye!\n");
-
   }
 }
 
